@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>opdracht4</title>
+	</head>
+	<body>
+		<script>
+			function tafel() {
+				var number = prompt("Voer een getal in dat tien of er onder is waarvan U de tafel zou willen zien.");
+				if (number > 10 || number < 1) {
+					alert("Bereik van getal moet zijn: 1 t/m 10");
+					tafel();
+				}
+				else if (isNaN(number) == true) {
+					alert("U dient een getal in te voeren")
+					tafel();
+				}
+				else {
+					for (i = 1; i <= 10; i++) {
+					var berekening = number * i;
+					document.write(i + " x " + number + " = " + berekening + " <br> ");
+					}
+				}
+			}
+			tafel();
+		</script>
+	</body>
+</html>
