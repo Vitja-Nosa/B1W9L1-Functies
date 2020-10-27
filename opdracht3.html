@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>opdracht3</title>
-	</head>
-	<body>
-		<script>
-			var naam = prompt("Wat is je naam?");
-			var leeftijd = prompt("Hoe oud ben je?");
-
-			document.write("Hallo " + naam + "," + " je leeftijd is " + leeftijd + " jaar.");
-		</script>
-	</body>
+    <head>
+        <title>opdracht 3</title>
+    </head>
+    <body>
+        <script>
+            function vragen() {
+                var naam = prompt("Wat is je naam?");
+                var leeftijd = prompt("Hoe oud ben je?");
+                var bevestiging = prompt('Weet je zeker dat deze gegevens kloppen? Typ "stop" als alles klopt en je wilt doorgaan.');
+                if (bevestiging != "stop") {
+                    vragen();
+                }
+                else {
+                    document.write("Hallo " + naam + ", " + "je leeftijd is " + leeftijd + " jaar oud." )
+                }
+            }
+            vragen();
+        </script>
+    </body>
 </html>
